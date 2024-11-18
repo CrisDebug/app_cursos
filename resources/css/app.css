@@ -1,0 +1,118 @@
+/*crear el estilo con css*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*clase para gradient del body*/
+.body-gradient{
+    @apply min-h-screen 
+            bg-gradient-to-t 
+            from-violet-50
+            to-lime-50 
+            w-full;
+}
+/*clase para input text*/
+.input-text{
+    @apply py-1 
+            my-8 
+            p-4 
+            rounded-lg 
+            mt-1
+            w-full
+            flex flex-col
+            border-2 
+            border-gray-100 
+            outline-cyan-100;
+}
+/*boton personalizado*/
+.button-style{
+    @apply block mx-auto 
+            mt-1 
+            bg-orange-300
+            hover:bg-amber-300
+            rounded-md 
+            ease-in-out 
+            duration-300 
+            hover:underline 
+            text-slate-700
+            p-2
+            font-bold;
+}
+.list-style{
+    @apply block mx-1 
+            mt-2 
+            bg-orange-200
+            hover:bg-amber-200
+            rounded-md 
+            ease-in-out
+            duration-300 
+            text-black
+            p-2
+}
+/*button delete*/
+.button-delete{
+    @apply bg-red-500 
+            hover:bg-red-600
+            text-white 
+            font-bold 
+            py-2 
+            px-4 
+            rounded shadow-lg;
+}
+/*boton enlace crear curso*/
+.button-link{
+    @apply text-slate-900
+            bg-lime-200  
+            hover:bg-lime-300
+            font-bold 
+            ease-in 
+            duration-200 
+            rounded p-2;
+}
+/*titulo 1*/
+.title-h1{
+    @apply mt-10 
+            mb-8 
+            text-slate-900 
+            text-3xl 
+            text-pretty 
+            font-bold 
+            tracking-normal;
+}
+/*titulo 1*/
+.title-form{
+    @apply my-10 
+          text-slate-700 
+            text-2xl 
+            text-left 
+            font-bold 
+            tracking-normal;
+}
+/*estilo para lista desordenada*/
+.list-div{
+    @apply bg-opacity-0 
+            bg-slate-100              
+            text-red-500
+            p-4 leading-4;
+}
+/*opacity components*/
+.opacity-compt{
+    @apply  p-3;
+}
+/*tipo letra nombre atributos*/
+.letter-name-form{
+    @apply font-semibold text-slate-900;
+}
+/*contenedor formularios*/
+.div-container{
+    @apply  
+    container w-11/12 max-w-screen-md shadow-lg p-4;
+}
+/*frame para enmarcar los forms*/
+/* .div-frame{
+    @apply p-4 border border-gray-200 rounded-lg;
+} */
+.div-flex{
+    @apply flex items-center justify-center w-full h-full;
+}
+/* config tailwind footer */

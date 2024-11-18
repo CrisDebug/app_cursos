@@ -1,0 +1,36 @@
+/*crear el estilo con css*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-weight{
+    @apply
+        mb-4    
+        p-6
+        font-extrabold
+        text-6xl
+        text-teal-500;
+}
+/* la clase mx centra horizontalmente */
+/* px-4 es un relleno(padding) horizontal para que  */
+/* el contenido no se pegue al contenedor */
+/* px es una utilidad */
+.container{
+    @apply mx-auto
+            px-4
+            shadow-lg;
+}
+/* esta utilidad columns nos permite
+tener una organizacion de contenido */
+/* columns se utiliza para el numero de columnas
+gap se utiliza como espaciado entre los elementos */
+.columns{
+    @apply columns-3
+            gap-2;
+}
+/* decoraciones de la caja */
+.decoration{
+    @apply box-decoration-clone
+            bg-gradient-to-t from-slate-300 to-lime-200;
+}
+
