@@ -45,4 +45,18 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    //la relacion es uno a muchos con la tabla roles
+    //ya que un usuario puede tener muchos roles
+    //y de roles a usuarios es de muchos a muchos
+    //estableciendo relaciones con roles
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class);
+    }
+    // este metodo compureba si el usuario 
+    // tiene un rol especifico
+    public function hasRoles($role)
+    {
+        return $this->roles->contains('name',$role);
+    }
 }
