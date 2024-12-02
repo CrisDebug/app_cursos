@@ -33,7 +33,7 @@ class LoginController extends Controller
     }
     public function logout(Request $request)
     {
-        Auth::logout();//cuierra la session del usuario
+        Auth::logout();//cierra la session del usuario
         
         //revoca el token "remembe me" si existe
         $request->session()->invalidate();

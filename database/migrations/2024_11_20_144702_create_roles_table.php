@@ -25,6 +25,8 @@ return new class extends Migration
 
 
             //relaciones con users
+            //campos para ayudar a una auditoria de actividades realizadas por usuario
+            //opcionales por el momento
             $table->foreign('created_by')->references('id')->on('users')->nullOnDelete();
             $table->foreign('updated_by')->references('id')->on('users')->nullOnDelete();
         });
