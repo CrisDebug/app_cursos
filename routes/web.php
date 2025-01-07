@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\CursoController;
 use App\Http\Controllers\CursosDisponibles;
@@ -107,3 +108,7 @@ Route::post('/user',[LoginController::class, 'login'])->name('user.login');
 
 #######logout######
 Route::post('/logout',[LoginController::class,'logout'])->name('user.logout');
+
+###### ruta asignacion roles ########
+Route::get('/index',[RoleController::class,'index']);
+Route::get('/showRoles',[RoleController::class,'show'])->name('administracion.roles');

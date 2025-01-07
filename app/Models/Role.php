@@ -13,6 +13,10 @@ class Role extends Model
     //relacion de muchos a muchos
     public function users()
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class,'role_user');
+    }
+    public function permissions()
+    {
+        return $this->belongsToMany(Permission::class);
     }
 }

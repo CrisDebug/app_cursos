@@ -51,7 +51,7 @@ class User extends Authenticatable
     //estableciendo relaciones con roles
     public function roles()
     {
-        return $this->belongsToMany(Role::class);
+        return $this->belongsToMany(Role::class,'role_user');
     }
     // este metodo compureba si el usuario 
     // tiene un rol especifico

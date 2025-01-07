@@ -15,21 +15,28 @@
                 <li class=""><a class="px-2 py-4 w-full h-full block hover:bg-cyan-200 transition duration-800 font-semibold text-slate-700" href="{{route('cursosdisponibles.index')}}">Cursos</a></li>
                 <li class=""><a class="px-2 py-4 w-full h-full block hover:bg-cyan-200 transition duration-800 font-semibold text-slate-700" href="{{route('contactos.create')}}">Contactanos</a></li>
                 <li class=""><a class="px-2 py-4 w-full h-full block hover:bg-cyan-200 transition duration-800 font-semibold text-slate-700" href="{{route('cursos.index')}}">Mantenedor</a></li>
+                <li class=""><a class="px-2 py-4 w-full h-full block hover:bg-cyan-200 transition duration-800 font-semibold text-slate-700" href="{{route('roles.users.index')}}">Gestion</a></li>
             </ul>
         </nav> 
             <!--botones de session--> 
-            <div>   
+            <div> 
+                <!--boton registro-->
+                <button class="text-white px-2 py-4 hover:bg-orange-500 font-semibold whitespace-nowrap bg-orange-400">
+                    <a href="{{ route('usuario.showregisterform') }}">Registrese</a>
+                </button> 
+                <!--boton login-->  
                 <button class="text-slate-800 px-2 py-4 hover:bg-cyan-200 font-semibold whitespace-nowrap bg-cyan-100">
                     <a href="{{ route('login.show')}}">Iniciar Sesión</a>
                 </button> 
 
                 <!--formulario logout-->
-                <form action="{{route('user.logout')}}" method="POST" class="inline-block ml-4">
+                <form action="{{route('user.logout')}}" method="POST" class="inline-block">
                     @csrf
-                    <button type="submit" class="text-slate-800 px-2 py-4 hover:bg-cyan-200 font-semibold whitespace-nowrap">
+                    <button type="submit" class="text-slate-800 bg-cyan-100 px-2 py-4 hover:bg-cyan-200 font-semibold whitespace-nowrap">
                         Cerrar Sesión
                     </button>
                 </form>
+                
                 
             </div> 
         </div>
